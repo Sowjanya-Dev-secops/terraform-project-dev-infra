@@ -3,10 +3,16 @@ data "aws_ami" "instance_ami" {
   owners           = ["668183236892"]
   #668183236892
 
+  # filter {
+  #   name   = "name"
+  #   values = ["Redhat-9-DevOps-Practice"]
+  # }
+  
   filter {
-    name   = "name"
-    values = ["Redhat-9-DevOps-Practice"]
+  name   = "name"
+  values = ["Redhat-9-DevOps-Practice*"]
   }
+
 
   filter {
     name   = "root-device-type"
