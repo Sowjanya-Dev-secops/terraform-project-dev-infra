@@ -1,10 +1,10 @@
 resource "aws_instance" "bastion" {
-  ami           = local.ami_id
+  ami           = "ami-0220d79f3f480ecf5"
   vpc_security_group_ids = [local.bastion_sg_id]
   instance_type = "t3.micro"
   subnet_id = local.public_subnet_ids
   user_data = file("bastion.sh")
-  iam_instance_profile = aws_iam_instance_profile.bastion.name
+  # iam_instance_profile = aws_iam_instance_profile.bastion.name
   # need more for terraform
   root_block_device {
     volume_size = 50
@@ -19,7 +19,7 @@ resource "aws_instance" "bastion" {
     }
   )
 }
-resource "aws_iam_instance_profile" "bastion" {
-  name = "bastio"
-  role =  "BastionTerraformAdmin"
-}
+# resource "aws_iam_instance_profile" "bastion" {
+#   name = "bastio"
+#   role =  "BastionTerraformAdmin"
+# }
