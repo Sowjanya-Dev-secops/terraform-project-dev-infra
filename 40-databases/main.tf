@@ -97,7 +97,7 @@ resource "terraform_data" "rabbitmq" {
     type        = "ssh"
     user        = "ec2-user" # Or appropriate user for your AMI
     password    = "DevOps321"
-    host        = aws_instance.redis.private_ip
+    host        = aws_instance.rabbitmq.private_ip
   }
 
     provisioner "file" {
