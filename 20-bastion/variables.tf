@@ -1,3 +1,4 @@
+
 variable "project_name" {
     default = "roboshop"
 }
@@ -5,3 +6,5 @@ variable "project_name" {
 variable "environment" {
     default = "dev"
 }
+
+

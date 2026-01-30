@@ -7,7 +7,7 @@ resource "aws_instance" "mongodb" {
   tags = merge(
     local.common_tags,
     {
-        Name = "${var.project_name}-${var.environment}-mongodb"
+        Name = "${local.common_name_suffix}-mongodb"
     }
   )
 }
@@ -24,7 +24,7 @@ resource "terraform_data" "mongodb" {
 
   provisioner "remote-exec" {
     inline = [
-
+         "echo hello world"
     ]
   
   }
