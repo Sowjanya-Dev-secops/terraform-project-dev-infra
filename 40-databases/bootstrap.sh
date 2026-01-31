@@ -5,7 +5,7 @@ dnf install ansible -y
 
 REPO_URL=https://github.com/Sowjanya-Dev-secops/ansible-roboshop-roles-tf.git
 REPO_DIR=/opt/roboshop/ansible
-ANSIBLE_DIR=nsible-roboshop-roles-tf
+ANSIBLE_DIR=ansible-roboshop-roles-tf
 mkdir -p $REPO_DIR
 mkdir -p /var/log/roboshop/
 cd $REPO_DIR
