@@ -8,7 +8,7 @@ REPO_DIR=/opt/roboshop/ansible
 ANSIBLE_DIR=nsible-roboshop-roles-tf
 mkdir -p $REPO_DIR
 mkdir -p /var/log/roboshop/
-cd $
+cd $REPO_DIR
 
 if [ -d $ANSIBLE_DIR ]; then
     cd $ANSIBLE_DIR
