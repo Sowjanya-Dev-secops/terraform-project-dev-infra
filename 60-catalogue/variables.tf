@@ -24,9 +24,3 @@ variable "sg_names" {
         "open_vpn"
     ]
 }
-variable "zone_id" {
-  default = "Z02877213Q6KXL0HOGN3V"
-}
-variable "domain_name" {
-  default = "msdevsecops.fun"
-}
