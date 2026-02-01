@@ -92,7 +92,7 @@ resource "aws_launch_template" "catalogue" {
   }
   # tags attached to the volumes created by instance
   tag_specifications {
-    resource_type = "volumes"
+    resource_type = "volume"
 
     tags = merge(
         local.common_tags,
